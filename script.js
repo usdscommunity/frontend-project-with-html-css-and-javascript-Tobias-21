@@ -1,5 +1,13 @@
+// Code fonctionnel, mais peu robuste. Analyse le code que j'ai envoyé dans
+//  le groupe pour voir ce que tu doit améliorer. Sinon en gros c'est un bon travail
+
+
+// Ici éviter d'imbriquer les écouteurs d'événements. Ça ne pose pas de problème dans ton code
+// mais ça risque de très facilement créer des bugs sur des projets plus conséquents.
 document.addEventListener("DOMContentLoaded", function () {
 
+
+    // Doit être géré par le CSS et non par le Javascript.
     const image = document.getElementById("image")
     if (window.matchMedia("(max-width:700px)").matches) {
         image.src = "assets/images/illustration-sign-up-mobile.svg"
@@ -18,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
             email.style.backgroundColor = "white"
             email.style.color = "hsl(234, 29%, 20%)"
             afficherMessage("")
+
+            // Ici, il faut privilégier l'utilisation de display pour faire apparaitre et disparaitre
+            //la page plutôt que de rediriger vers une autre page.
             window.location.href = "succes.html"
 
         } catch (erreur) {

@@ -16,6 +16,9 @@
 <body>
 
   <!-- Sign-up form start -->
+<!--  Ici, il aurait mieux valu d'utiliser tes sections à l'intérieur d'un main
+      pour éviter d'utiliser des div-->
+
   <section class="section">
     <div class="img">
       <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration" id="image">
@@ -27,24 +30,46 @@
       <p> Join 60,000+ product managers receiving monthly updates on: </p>
 
       <form action="">
-        <div class="container">
-          <div>
-            <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
-            <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
-            <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
-          </div>
-          <div>
-            <p class="liste"> Product discovery and building what matters </p>
-            <p class="liste"> Measuring to ensure updates are a success </p>
-            <p class="liste"> And much more! </p>
-          </div>
-        </div>
 
+<!--        Tout ceci n'a pas besoin de se trouver dans le formulaire, tu dois juste mettre
+le label et l'input à l'intérieur du formulaire.-->
+              <!--###### ne devrait pas être dans le formulaire #######-->
+                      <div class="container">
+                        <div>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                        </div>
+                        <div>
+                          <p class="liste"> Product discovery and building what matters </p>
+                          <p class="liste"> Measuring to ensure updates are a success </p>
+                          <p class="liste"> And much more! </p>
+                        </div>
+                      </div>
+              <!--######-->
 
         <p>
         <p class="email"> <label for="email"> Email address </label> </p>
         <input type="email" name="email" id="email" placeholder="email@company.com">
         </p>
+
+<!--        voici  deux techniques correctes pour ton formulaire d'email-->
+<!--        <label>-->
+<!--          Email address-->
+<!--          <input type="email" name="email" placeholder="email@company.com">-->
+<!--        </label>-->
+<!--        -->
+<!--        <div class="email"> -->
+<!--          <label for="email"> Email address </label>-->
+<!--          <input type="email" name="email" id="email" placeholder="email@company.com">-->
+<!--        </div>-->
+
+<!--        Tu as utilisé une balise p pour éviter d'utiliser une div, je suppose, mais sémantiquement
+la balise p, c'est pour les paragraphes alors qu'ici, il s'agit d'un formulaire donc les deux méthodes ci-dessus
+sont préférables.-->
+
+
+
         <p class="button">
           <button type="submit"> Subscribe to monthly newsletter </button>
         </p>
@@ -62,6 +87,9 @@
       Coded by <a href="#">MONSI Olowun-Tobi </a>.
     </div>
   </footer>
+
+<!--  Pas besoin de mettre defer vu que tu as ajouter le script en bas de page.
+ on l'ajoute lorsque c'est au niveau du head-->
   <script src="script.js" defer></script>
 </body>
 
