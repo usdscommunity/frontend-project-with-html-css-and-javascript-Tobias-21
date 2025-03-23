@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
   <!-- Sign-up form start -->
+<!--  Ici, il aurait mieux valu d'utiliser tes sections à l'intérieur d'un main
+      pour éviter d'utiliser des div-->
 
-  Stay updated!
+  <section class="section">
+    <div class="img">
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="illustration" id="image">
+    </div>
 
-  Join 60,000+ product managers receiving monthly updates on:
+    <div class="stay">
+      <h1> Stay updated! </h1>
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
+      <p> Join 60,000+ product managers receiving monthly updates on: </p>
 
-  Email address
-  email@company.com
+      <form action="">
 
-  Subscribe to monthly newsletter
+<!--        Tout ceci n'a pas besoin de se trouver dans le formulaire, tu dois juste mettre
+le label et l'input à l'intérieur du formulaire.-->
+              <!--###### ne devrait pas être dans le formulaire #######-->
+                      <div class="container">
+                        <div>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                          <p class="image"> <img src="assets/images/icon-list.svg" alt="icon-list"></p>
+                        </div>
+                        <div>
+                          <p class="liste"> Product discovery and building what matters </p>
+                          <p class="liste"> Measuring to ensure updates are a success </p>
+                          <p class="liste"> And much more! </p>
+                        </div>
+                      </div>
+              <!--######-->
 
+        <p>
+        <p class="email"> <label for="email"> Email address </label> </p>
+        <input type="email" name="email" id="email" placeholder="email@company.com">
+        </p>
+
+<!--        voici  deux techniques correctes pour ton formulaire d'email-->
+<!--        <label>-->
+<!--          Email address-->
+<!--          <input type="email" name="email" placeholder="email@company.com">-->
+<!--        </label>-->
+<!--        -->
+<!--        <div class="email"> -->
+<!--          <label for="email"> Email address </label>-->
+<!--          <input type="email" name="email" id="email" placeholder="email@company.com">-->
+<!--        </div>-->
+
+<!--        Tu as utilisé une balise p pour éviter d'utiliser une div, je suppose, mais sémantiquement
+la balise p, c'est pour les paragraphes alors qu'ici, il s'agit d'un formulaire donc les deux méthodes ci-dessus
+sont préférables.-->
+
+
+
+        <p class="button">
+          <button type="submit"> Subscribe to monthly newsletter </button>
+        </p>
+      </form>
+    </div>
+
+
+  </section>
   <!-- Sign-up form end -->
 
-  <!-- Success message start -->
 
-  Thanks for subscribing!
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">MONSI Olowun-Tobi </a>.
+    </div>
+  </footer>
 
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<!--  Pas besoin de mettre defer vu que tu as ajouter le script en bas de page.
+ on l'ajoute lorsque c'est au niveau du head-->
+  <script src="script.js" defer></script>
 </body>
+
 </html>

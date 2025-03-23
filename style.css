@@ -1,0 +1,246 @@
+/*CSS plûtot propre mais reste à améliorer les médias queries
+et le flexbox de tes élements*/
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("assets/fonts/Roboto-Bold.ttf");
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    font-size: 16px;
+    color: hsl(234, 29%, 20%);
+    background-color: hsl(234, 29%, 20%);
+}
+
+p {
+    font-weight: 400;
+    font-family: "Roboto-Regular";
+}
+
+h1 {
+    color: hsl(234, 29%, 20%);
+    font-size: 3em;
+    font-family: "Roboto-Bold";
+
+}
+
+
+.email {
+    font-weight: 700;
+    font-family: "Roboto-Bold";
+}
+
+input[type="email"] {
+    padding: 1.3em;
+    background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 58%, 0.4);
+    font-family: "Roboto-Bold";
+    border-radius: 10px;
+    width: 80%;
+}
+
+button {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    padding: 1.4em;
+    justify-content: center;
+    border-radius: 10px;
+    border: none;
+    width: 90%;
+    font-family: "Roboto-Bold";
+
+}
+
+.container {
+    display: flex;
+}
+
+.image {
+    padding-right: 1.3em;
+
+}
+
+.liste {
+    padding-bottom: 0.4em;
+}
+
+.section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5em 1.5em 1.5em 3.5em;
+    width: 47%;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.stay {
+    width: 25em;
+}
+
+footer {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+input[type="email"]:hover {
+    border-color: hsl(234, 29%, 20%);
+}
+
+input[type="email"]:focus {
+    border: none
+}
+
+button:hover {
+    background: linear-gradient(90deg, hsl(350, 95%, 56%), hsl(4, 100%, 67%));
+
+}
+
+.section2 {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em 3em 2em 3em;
+    width: 20%;
+    margin: auto;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.ecart {
+    font-family: "Roboto-Bold";
+    font-size: 2.2em;
+}
+
+@media screen and (max-width:700px) {
+
+    #image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .img {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: hsl(0, 0%, 100%);
+    }
+
+
+    .section {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        border-radius: 0%;
+        transform: none;
+        position: static;
+    }
+
+    .stay {
+        margin-top: 90%;
+        padding: 0em 2em 2em 1em;
+        width: 98%;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    button {
+        width: 89%;
+        margin-bottom: 5em;
+    }
+
+    input[type="email"] {
+        width: 79%;
+    }
+
+    .section2 {
+        width: auto;
+        margin: 6em auto;
+        border-radius: 0%;
+        position: static;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+
+    }
+
+    .section2 button {
+        margin-top: 50%;
+    }
+
+    footer {
+
+        position: fixed;
+        background-color: hsl(234, 29%, 20%);
+        color: white;
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:1400px) {
+
+    #image {
+        width: 350px;
+    }
+
+    .stay {
+        width: auto;
+        padding-left: 0%;
+    }
+
+    .section {
+        width: 90%;
+    }
+
+    input[type="email"] {
+        width: 80%;
+    }
+
+    button {
+        width: 92%;
+    }
+
+    .section2 {
+        width: 40%;
+    }
+
+}
